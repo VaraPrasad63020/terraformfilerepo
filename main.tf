@@ -8,6 +8,6 @@ resource "aws_instance" "terraform"{
     ami="ami-0c3c912253ec8a579"
     instance_type="t2_micro"
     tag={
-        name="Varaprasad"
+        name="Lakshmiprasad"
     }
 }
