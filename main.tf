@@ -1,28 +1,17 @@
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0.1"
-    }
-  }
+provider "aws" {
+  region = "us-east-1"
+  secret_key = "DbkUXUZo3mGbC0m3PiECWTAcN8mECfe3ZozIT0WG"
+  access_key = "AKIAWIRLAIO2TLKXPUG7"
+
 }
-
-provider "docker" {
-  host    = "npipe:////.//pipe//docker_engine"
+variable "instance_type" {
+  
 }
-
-resource "docker_image" "nginx" {
-  name         = "nginx"
-  keep_locally = false
+variable "ami" {
+  
 }
-
-resource "docker_container" "nginx" {
-  image = docker_image.nginx.image_id
-  name  = "tutorial"
-
-  ports {
-    internal = 80
-    external = 8000
-  }
- 
+resource "aws_instance" "aws_instance" {
+  
+  instance_type = var.instance_type
+  ami=var.ami
 }
