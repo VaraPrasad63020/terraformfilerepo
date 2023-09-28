@@ -5,10 +5,10 @@ provider "aws" {
 
 }
 variable "instance_type" {
-  
+  default = "t2.micro"
 }
 variable "ami" {
-  
+  default = "ami-03a6eaae9938c858c"
 }
 resource "aws_instance" "aws_instance" {
   
