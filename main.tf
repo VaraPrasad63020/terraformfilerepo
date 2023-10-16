@@ -6,7 +6,7 @@ provider "aws" {
 }
 #Resource of multiple applications
 resource "aws_instance" "multiple_applications" {
-    ami="ami-0c42696027a8ede58"
+    ami="ami-041feb57c611358bd"
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     tags = {
