@@ -18,7 +18,7 @@ resource "aws_instance" "multiple_applications" {
     type = "ssh"
     host = self.public_ip
     user = "ec2-user"
-    private_key = file("Multiple-keypair")    
+    private_key = file("Mulitpapp")    
  }
  provisioner "remote-exec" {
   inline = [ 
