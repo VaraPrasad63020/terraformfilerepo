@@ -12,7 +12,7 @@ resource "aws_instance" "multiple_applications" {
     tags = {
         Name="MultipleAppIns"
     }
-    key_name = "Multiple-keypair"
+    key_name = var.keypair
     
     connection {
     type = "ssh"
