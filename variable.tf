@@ -1,3 +1,3 @@
 variable "keypair"{
-    default ="Mulitpapp"
+    default ="Multiple-keypair"
 }
